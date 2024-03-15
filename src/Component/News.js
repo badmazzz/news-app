@@ -1,0 +1,328 @@
+import React, { Component } from "react";
+import Newsitems from "./Newsitems";
+
+export class News extends Component {
+  articles = [
+    {
+      source: { id: null, name: "WION" },
+      author: "WION Web Team",
+      title:
+        "Asteroid Apophis to flyby Earth in first of its kind encounter in recorded history - WION",
+      description:
+        "Asteroid Apophis to flyby Earth in first of its kind encounter in recorded history",
+      url: "https://www.wionews.com/science/nasa-begins-mission-to-detect-god-of-chaos-asteroid-before-it-hits-earths-orbit-673950",
+      urlToImage:
+        "https://cdn.wionews.com/sites/default/files/2023/12/27/401913-untitled-design-2023-12-27t130837852.png",
+      publishedAt: "2023-12-28T08:31:05Z",
+      content:
+        "NASA relaunched a mission to study the God of Chaos asteroid as it started coming closer to the orbit of Earth. \r\nA spacecraft, which had recently returned from deep space, was returned by NASA to ca… [+2415 chars]",
+    },
+    {
+      source: { id: null, name: "Yahoo Entertainment" },
+      author: "Chiranjivi Chakraborty and Richard Henderson",
+      title:
+        "Bonds, Stocks Rally Into Year-End on Fed Cut Bets: Markets Wrap - Yahoo Finance",
+      description:
+        "(Bloomberg) -- Stocks and bonds in Asia followed Wall Street higher as investors position themselves for anticipated Federal Reserve interest-rate cuts next ...",
+      url: "https://finance.yahoo.com/news/asia-stocks-tread-water-p-224046345.html",
+      urlToImage:
+        "https://s.yimg.com/ny/api/res/1.2/dKWp2H6ZyEg.O6UODgzHog--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/bloomberg_markets_842/b0e3299ae978f68d6854a1c03b35ca96",
+      publishedAt: "2023-12-28T05:36:00Z",
+      content:
+        "(Bloomberg) -- Stocks and bonds in Asia followed Wall Street higher as investors position themselves for anticipated Federal Reserve interest-rate cuts next year. Gold rose to a record high.\r\nMost Re… [+4887 chars]",
+    },
+    {
+      source: { id: "associated-press", name: "Associated Press" },
+      author: "HEATHER HOLLINGSWORTH",
+      title:
+        "Gypsy Rose Blanchard set to be paroled years after persuading boyfriend to kill her abusive mother - The Associated Press",
+      description:
+        "Gypsy Rose Blanchard is set to be paroled years after she persuaded an online boyfriend to kill her abusive mother. The now-32-year-old Missouri woman is scheduled to be released on Thursday. Her case sparked national tabloid interest after reports emerged th…",
+      url: "https://apnews.com/article/gypsy-rose-blanchard-munchausen-mother-killed-b3a792e32b72eb13feed9a73df2065fd",
+      urlToImage:
+        "https://dims.apnews.com/dims4/default/d466151/2147483647/strip/true/crop/5761x3241+0+252/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F2e%2F32%2F1ed0379f8c1f12d7c8831e3188b8%2F26cc6bc137e14686ad61c46e894a2dd5",
+      publishedAt: "2023-12-28T05:35:00Z",
+      content:
+        "Gypsy Rose Blanchard, the Missouri woman who persuaded an online boyfriend to kill her mother after she had forced her to pretend for years that she was suffering from leukemia, muscular dystrophy an… [+5658 chars]",
+    },
+    {
+      source: { id: "associated-press", name: "Associated Press" },
+      author: "FREDERIC J. FROMMER, TODD RICHMOND",
+      title:
+        "Herb Kohl, former US senator and owner of the NBA's Milwaukee Bucks, has died. He was 88 - The Associated Press",
+      description:
+        "Herb Kohl, a former Democratic U.S. senator from Wisconsin and former owner of the Milwaukee Bucks, has died. He was 88. His death Wednesday was announced by Herb Kohl Philanthropies. The foundation did not give a cause but said he died after a brief illness.…",
+      url: "https://apnews.com/article/herb-kohl-died-f2f0a85ca0b84af794f73c22b7d8d420",
+      urlToImage:
+        "https://dims.apnews.com/dims4/default/9f63929/2147483647/strip/true/crop/2729x1535+0+280/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F7c%2Fb0%2Ffa9c51717f5d96a52c8fb625b7d7%2Fb90c7de5328549eeb53511f52134430e",
+      publishedAt: "2023-12-28T05:01:00Z",
+      content:
+        "Herb Kohl, a former Democratic U.S. senator from Wisconsin and former owner of the NBAs Milwaukee Bucks, has died. He was 88.\r\nHis death Wednesday was announced by Herb Kohl Philanthropies, which did… [+6219 chars]",
+    },
+    {
+      source: { id: null, name: "Nikkei.com" },
+      author: "Staff Writer",
+      title:
+        "India and Russia inch closer to jointly producing weapons - Nikkei Asia",
+      description:
+        "In meeting with Jaishankar, Putin conveys invitation for Modi to visit Russia",
+      url: "https://asia.nikkei.com/Politics/International-relations/India-and-Russia-inch-closer-to-jointly-producing-weapons",
+      urlToImage:
+        "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fcms-image-bucket-production-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com%2Fimages%2F9%2F1%2F7%2F2%2F47052719-6-eng-GB%2F20231228Putin.JPG?width=1260&height=630&fit=cover&gravity=faces&source=nar-cms",
+      publishedAt: "2023-12-28T04:50:00Z",
+      content:
+        "NEW DELHI -- Russia and India discussed plans and made progress in talks toward jointly producing military equipment, Russian Foreign Minister Sergey Lavrov said in Moscow on Wednesday after holding … [+349 chars]",
+    },
+    {
+      source: { id: null, name: "Yahoo Entertainment" },
+      author: "Frank Schwab",
+      title:
+        "Russell Wilson benched by Broncos, setting up huge questions for important offseason - Yahoo Sports",
+      description:
+        "Russell Wilson's future in Denver is in doubt after Wednesday's news.",
+      url: "https://sports.yahoo.com/russell-wilson-benched-by-broncos-setting-up-huge-questions-for-important-offseason-171057586.html",
+      urlToImage:
+        "https://s.yimg.com/ny/api/res/1.2/UIKuptu_pIjzxzWX.psx_Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04OTE-/https://s.yimg.com/os/creatr-uploaded-images/2023-12/789c2970-a4da-11ee-bfc7-b276c19d0a83",
+      publishedAt: "2023-12-28T04:34:00Z",
+      content:
+        "Russell Wilson and Sean Payton was always going to be a year-to-year relationship. If Wilson took off under Payton, they could live happily together for years to come.\r\nIf not, a major change would b… [+4808 chars]",
+    },
+    {
+      source: { id: "cnn", name: "CNN" },
+      author: "",
+      title:
+        "Video: Hear Nikki Haley's response to question about cause of Civil War - CNN",
+      description:
+        "Republican presidential candidate Nikki Haley was pressed about whether slavery was a cause of the American Civil War during a campaign event in New Hampshire.",
+      url: "https://www.cnn.com/videos/politics/2023/12/28/nikki-haley-civil-war-slavery-shah-vpx.cnn",
+      urlToImage:
+        "https://media.cnn.com/api/v1/images/stellar/prod/231227232935-nikki-haley-berlin-new-hampshire-12272023.jpg?c=16x9&q=w_800,c_fill",
+      publishedAt: "2023-12-28T04:32:23Z",
+      content: null,
+    },
+    {
+      source: { id: null, name: "[Removed]" },
+      author: null,
+      title: "[Removed]",
+      description: "[Removed]",
+      url: "https://removed.com",
+      urlToImage: null,
+      publishedAt: "1970-01-01T00:00:00Z",
+      content: "[Removed]",
+    },
+    {
+      source: { id: null, name: "Sports Illustrated" },
+      author: "Madison Williams",
+      title:
+        "USC QB Miller Moss Makes Program History With Epic Bowl Performance vs. Louisville - Sports Illustrated",
+      description:
+        "Caleb Williams’s backup quarterback shined in his first start with the program.",
+      url: "https://www.si.com/college/2023/12/28/usc-qb-miller-moss-program-history-epic-bowl-performance-louisville",
+      urlToImage:
+        "https://www.si.com/.image/ar_1.91%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_1200/MjAzMjE5NTM2NTU4Njk1NjA2/miller-moss.jpg",
+      publishedAt: "2023-12-28T04:22:08Z",
+      content:
+        "As USC quarterback Miller Moss threw his fifth touchdown of the Holiday Bowl vs. Louisville in the third quarter, he etched his name into program history.\r\nSince this game marked the first start of M… [+860 chars]",
+    },
+    {
+      source: { id: "fox-news", name: "Fox News" },
+      author: "Louis Casiano",
+      title:
+        "Colorado GOP asking US Supreme Court to overturn ruling disqualifying Trump from 2024 ballot - Fox News",
+      description:
+        "Colorado Republicans are asking the U.S. Supreme Court to overturn a lower court ruling that prevents his name from appearing on the 2024 ballot.",
+      url: "https://www.foxnews.com/politics/colorado-gop-asking-us-supreme-court-overturn-ruling-disqualifying-trump-2024-ballot",
+      urlToImage:
+        "https://static.foxnews.com/foxnews.com/content/uploads/2023/12/GettyImages-1827349352.jpg",
+      publishedAt: "2023-12-28T02:57:00Z",
+      content:
+        "The Colorado Republican Party said it's asking the U.S. Supreme Court to overturn a ruling that barred former President Donald Trump from appearing on the state's 2024 ballot. \r\nEarlier this month, t… [+3400 chars]",
+    },
+    {
+      source: { id: null, name: "Colorado Public Radio" },
+      author: "Caitlyn Kim",
+      title:
+        "Boebert says she is switching congressional districts for the 2024 election. The move will put her in a safer Republican seat - Colorado Public Radio",
+      description:
+        "Congresswoman Lauren Boebert is headed to the Eastern Plains after announcing she’d run in Colorado’s Fourth Congressional District",
+      url: "https://www.cpr.org/2023/12/27/lauren-boebert-congress-2024-election-switching-districts/",
+      urlToImage:
+        "https://wp-cpr.s3.amazonaws.com/uploads/2023/10/AP23256651445487.jpg?resize=1200,600",
+      publishedAt: "2023-12-28T02:56:26Z",
+      content:
+        "The hard right conservative was one of the holdouts last January who tried to deny Kevin McCarthy the speakership. She also tried to force an impeachment vote against President Joe Biden this spring,… [+2186 chars]",
+    },
+    {
+      source: { id: null, name: "KATU" },
+      author: "Victor Park, KATU Staff",
+      title:
+        "Contagious shigella infection spreads through Portland area, renewing health warnings - KATU",
+      description:
+        "A renewed warning is coming from Multnomah County about an outbreak of a contagious infection spreading through the Portland-metro area.Shigella is an intestina",
+      url: "https://katu.com/news/local/contagious-shigella-infection-spreads-through-portland-area-renewing-health-warnings",
+      urlToImage:
+        "https://katu.com/resources/media/4ada266d-5c31-40dd-8e0c-f1cfacc44f3e-large16x9_SHIGELLAUPDATEcaptioned.jpg",
+      publishedAt: "2023-12-28T02:48:42Z",
+      content:
+        "PORTLAND, Ore. A renewed warning is coming from Multnomah County about an outbreak of a contagious infection spreading through the Portland-metro area.\r\nShigella is an intestinal infection that can s… [+2334 chars]",
+    },
+    {
+      source: { id: "the-times-of-india", name: "The Times of India" },
+      author: "Vijay V Singh",
+      title:
+        "France flight: Spl IGP seeks probe into trafficking angle - Times of India",
+      description:
+        "Mumbai: A day after 276 passengers detained on suspicion of human trafficking in France landed in Mumbai, special inspector general of police (prevent.",
+      url: "https://timesofindia.indiatimes.com/city/mumbai/france-flight-spl-igp-seeks-probe-into-trafficking-angle/articleshow/106334656.cms",
+      urlToImage:
+        "https://static.toiimg.com/thumb/msid-106334654,width-1070,height-580,imgsize-12054,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+      publishedAt: "2023-12-28T02:44:17Z",
+      content: "11 Animals that shed skin, body parts",
+    },
+    {
+      source: { id: "reuters", name: "Reuters" },
+      author: "Tom Wilson, Wayne Cole",
+      title: "Asia shares at five-month highs as rate bets pile up - Reuters",
+      description:
+        "World shares gained on Thursday as market wagers on ever-more aggressive interest rate cuts stretched a rally in U.S. stocks and bonds, while the dollar fell to five-month lows.",
+      url: "https://www.reuters.com/markets/global-markets-wrapup-1-2023-12-28/",
+      urlToImage:
+        "https://www.reuters.com/resizer/TecZrcd05yTPo4jAAO_lJSYqDjA=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/2SKSZJEZINOLXEPBMWXE7ZIPIY.jpg",
+      publishedAt: "2023-12-28T02:42:26Z",
+      content:
+        "LONDON/SYDNEY, Dec 28 (Reuters) - World shares gained on Thursday as market wagers on ever-more aggressive interest rate cuts stretched a rally in U.S. stocks and bonds, while the dollar fell to five… [+3869 chars]",
+    },
+    {
+      source: { id: null, name: "BGR" },
+      author: "Andy Meek, Andy Meek",
+      title:
+        "iPhone is still regarded as a status symbol among young people - BGR",
+      description:
+        "Based on the responses in this TikTok video - yes, you will be judged by many young people for owning an Android device instead of an iPhone.",
+      url: "https://bgr.com/tech/tiktoker-asks-a-group-of-women-whether-a-guy-can-still-be-a-10-if-he-has-an-android-phone/",
+      urlToImage:
+        "https://bgr.com/wp-content/uploads/2023/12/rsz_gettyimages-1858326062.jpg?quality=82&strip=all",
+      publishedAt: "2023-12-28T02:16:00Z",
+      content:
+        "To the surprise of absolutely no one, Piper Sandler’s semi-annual survey of teen tastes and trends found that Apple’s iPhone continues to reign supreme among the demographic, with 87% of teens not on… [+1908 chars]",
+    },
+    {
+      source: { id: "reuters", name: "Reuters" },
+      author: "Reuters",
+      title:
+        "Russian stars' semi-naked party sparks wartime backlash - Reuters",
+      description: null,
+      url: "https://www.reuters.com/world/europe/russian-stars-semi-naked-party-sparks-wartime-backlash-2023-12-28/",
+      urlToImage: null,
+      publishedAt: "2023-12-28T02:10:33Z",
+      content: null,
+    },
+    {
+      source: {
+        id: "entertainment-weekly",
+        name: "Entertainment Weekly",
+      },
+      author: "https://www.facebook.com/entertainmentweekly",
+      title:
+        "Cher seeks conservatorship of son Elijah Blue Allman - Entertainment Weekly News",
+      description:
+        "Cher is seeking sole conservatorship of her 47-year-old son Elijah Blue Allman, who has suffered from addiction in the past, according to court documents obtained by PEOPLE.",
+      url: "https://ew.com/cher-seeks-conservatorship-of-son-elijah-blue-allman-8420536",
+      urlToImage:
+        "https://ew.com/thmb/XpY04az2yJ2KsL6E952J_nGOf5M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Cher-Elijah-Blue-Allman-092723-87ba5618c55a48a18f33a096afb38579.jpg",
+      publishedAt: "2023-12-28T01:54:58Z",
+      content:
+        "Cher has filed to place her son Elijah Blue Allman in a conservatorship.\r\nThe move allegedly comes as a result of Allmans severe substance abuse issues, according to case documents obtained by PEOPLE… [+1675 chars]",
+    },
+    {
+      source: { id: null, name: "NBC Southern California" },
+      author: "The Associated Press",
+      title:
+        "Comedian Tom Smothers, one-half of the Smothers Brothers, dies at 86 - NBC Southern California",
+      description:
+        "The National Comedy Center, on behalf of his family, said in a statement Wednesday that Tom Smothers died Tuesday following a cancer battle.",
+      url: "http://www.nbclosangeles.com/entertainment/entertainment-news/comedian-tom-smothers-one-half-of-the-smothers-brothers-dies-at-86/3298763/",
+      urlToImage:
+        "https://media.nbclosangeles.com/2023/12/GettyImages-121555784.jpg?quality=85&strip=all&crop=0px%2C0px%2C3000px%2C1688px&resize=1200%2C675",
+      publishedAt: "2023-12-28T01:53:15Z",
+      content:
+        "Tom Smothers, half of the Smothers Brothers and the co-host of one of the most socially conscious and groundbreaking television shows in the history of the medium, has died at 86.\r\nThe National Comed… [+8662 chars]",
+    },
+    {
+      source: { id: "the-hill", name: "The Hill" },
+      author: "Joe Jacquez",
+      title:
+        "New study finds that pediatric RSV led to higher hospitalization rates than omicron or flu - The Hill",
+      description:
+        "A backdated study from JAMA Pediatrics revealed that hospital admission rates were significantly higher for respiratory syncytial virus (RSV) compared with the omicron strain of COVID or the flu. The data, collected from testing of children at Swedish emergen…",
+      url: "https://thehill.com/homenews/4379682-rsv-covid-flu-hospitalization-rates-study/",
+      urlToImage:
+        "https://thehill.com/wp-content/uploads/sites/2/2023/11/65568fdec03929.61914580.jpeg?w=1280",
+      publishedAt: "2023-12-28T01:51:00Z",
+      content:
+        "Skip to content\r\nA backdated study from JAMA Pediatrics revealed that hospital admission rates were significantly higher for respiratory syncytial virus (RSV) compared with the omicron strain of COVI… [+1901 chars]",
+    },
+    {
+      source: { id: null, name: "NorthJersey.com" },
+      author: "Scott Fallon",
+      title:
+        "Feeling yucky? RSV, flu, COVID, stomach virus cases all rising in NJ - NorthJersey.com",
+      description:
+        "Rates of flu, RSV, COVID and norovirus have climbed in recent weeks, a trend likely to continue after the holidays. gatherings and travel",
+      url: "https://www.northjersey.com/story/news/health/2023/12/27/what-is-rsv-flu-covid-stomach-virus-december-2023/72038214007/",
+      urlToImage:
+        "https://www.northjersey.com/gcdn/authoring/authoring-images/2023/12/01/USAT/71766517007-getty-images-824552244.jpg?crop=5759,3240,x0,y0&width=3200&height=1801&format=pjpg&auto=webp",
+      publishedAt: "2023-12-28T01:25:37Z",
+      content:
+        "New Jersey's respiratory illness and stomach bug season appears to be in full swing, as rates of the flu, RSV, COVID and norovirus have climbed in the last few weeks and will likely increase after ho… [+2889 chars]",
+    },
+  ];
+
+  constructor() {
+    super();
+    this.state = {
+      articles: this.articles,
+    };
+  }
+  async componentDidMount() {
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=794d80cdde89491e9a268a5adef9060a";
+    let data = await fetch(url);
+    let parsedata = await data.json();
+    console.log(parsedata);
+    this.setState({ articles: parsedata.articles });
+  }
+  render() {
+    return (
+      <>
+        <div className="container my-3">
+          <h2>News top head lines</h2>
+          <div className="row">
+            {this.state.articles.map((element) => {
+              return (
+                <div className="col-md-3 my-1" key={element.url}>
+                  <Newsitems
+                    title={element.title}
+                    disc={element.description}
+                    imageurl={element.urlToImage}
+                    newsurl={element.url}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="d-flex justify-content-between">
+            <button type="button" class="btn btn-dark">
+              &#xf104; Previous
+            </button>
+            <button type="button" class="btn btn-dark">
+              Next &#xf105;
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
+
+export default News;
